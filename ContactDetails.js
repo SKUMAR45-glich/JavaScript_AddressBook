@@ -140,3 +140,27 @@ let edit = EditContactDetails("MS", "CSK");
 if (edit) {
     console.log("Edited");
 }
+
+
+function DeleteContactDetails(firstName) {
+    flag = 1;
+    for (i = 0; i < AddressBook.length; i++) {
+        if (AddressBook[i].firstName == firstName) {
+            AddressBook[i] = null;
+            flag = 2;
+            break;
+        }
+    }
+    if (flag == 2) {
+        console.log("Please enter correct name");
+        return false;
+    }
+    return true;
+}
+
+let del = DeleteContactDetails("MS");
+
+if (del) {
+    console.log("Deleted");
+}
+
