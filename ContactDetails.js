@@ -164,3 +164,12 @@ if (del) {
     console.log("Deleted");
 }
 
+
+
+
+function countContacts() {
+    return AddressBook.length;
+}
+
+let count = countContacts();
+console.log(count);
