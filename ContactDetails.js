@@ -87,3 +87,32 @@
     }
 
 }
+
+
+let AddressBook = []
+
+let contact1 = new ContactDetails();
+
+contact1.firstName = "MS";
+contact1.lastName = "Dhoni";
+contact1.address = "Ranchi";
+contact1.city = "Chennai";
+contact1.state = "Jharkhand";
+contact1.zip = "123 456";
+contact1.phNumber = "99999999";
+contact1.email = "msd@gmail.com";
+
+AddressBook[0] = contact1;
+
+
+let contact2 = new ContactDetails();
+
+contact2.firstName = "V";
+contact2.lastName = "Kohli";
+contact2.address = "Delhi";
+contact2.city = "Banglore";
+contact2.state = "Dilli";
+contact2.zip = "789 456";
+contact2.email = "vk@gmail.com";
+
+AddressBook[1] = contact2;
