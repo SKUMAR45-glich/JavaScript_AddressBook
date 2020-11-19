@@ -116,3 +116,27 @@ contact2.zip = "789 456";
 contact2.email = "vk@gmail.com";
 
 AddressBook[1] = contact2;
+
+
+
+function EditContactDetails(firstName, city) {
+    flag = 1;
+    for (i = 0; i < AddressBook.length; i++) {
+        if (AddressBook[i].firstName == firstName) {
+            AddressBook[i].city = city;
+            flag = 2;
+            break;
+        }
+    }
+    if (flag == 2) {
+        console.log("Please enter correct name");
+        return false;
+    }
+    return true;
+}
+
+let edit = EditContactDetails("MS", "CSK");
+
+if (edit) {
+    console.log("Edited");
+}
