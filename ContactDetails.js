@@ -211,3 +211,14 @@ console.log(cityToSearch.firstName);
 function SearchForCity(city) {
     return AddressBook.filter(contactDetails => contactDetails.city == city);
 }
+
+
+//Count by City
+
+let countCity = CountForCity("Banglore");
+console.log(countCity);
+
+
+function CountForCity(city) {
+    return AddressBook.count(contactDetails => contactDetails.city == city);
+}
