@@ -200,3 +200,14 @@ let contact = AddContactwithNoDuplicate(contact1);
 if (!contact) {
     console.log("Contact SuccessFully Added");
 }
+
+
+//Search by City
+
+let cityToSearch = SearchForCity("Banglore");
+console.log(cityToSearch.firstName);
+
+
+function SearchForCity(city) {
+    return AddressBook.filter(contactDetails => contactDetails.city == city);
+}
