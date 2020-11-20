@@ -173,3 +173,30 @@ function countContacts() {
 
 let count = countContacts();
 console.log(count);
+
+
+
+//Prevent Duplicate
+
+function AddContactwithNoDuplicate(contact) {
+
+    let isDuplicate = false;
+
+    let fullname = contact.firstname + " " + contact.lastname;
+
+    for (let item of AddressBook) {
+        if ((item.firstname + " " + item.lastname) == fullname) {
+            isDuplicate = true;
+        }
+    }
+    if (!isDuplicate) {
+        AddressBook.push(contact);
+    }
+    return isDuplicate;
+}
+
+let contact = AddContactwithNoDuplicate(contact1);
+
+if (!contact) {
+    console.log("Contact SuccessFully Added");
+}
