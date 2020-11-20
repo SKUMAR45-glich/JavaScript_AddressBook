@@ -240,3 +240,15 @@ function DisplayContact() {
         console.log("Name:" + contact.firstName + " Address" + contact.address);
     })
 }
+
+
+//Sorting By City
+
+console.log("Before Sorting");
+DisplayContact();
+SortByCity();
+
+function SortByCity() {
+    AddressBook.sort((a, b) => (a.city > b.city) ? 1 : ((a.city < b.city) ? -1 : 0));
+    DisplayContact();
+}
